@@ -6,66 +6,98 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     color: #333;
-    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
-    background-color: #171a3a;
+    width: 100%;
+    background-color: #282b41;
     color: white;
-    padding: 1em;
+    padding: 20px;
     text-align: center;
 }
 
-h1 {
-    font-family: 'Georgia', serif;
+header h1 {
     font-size: 2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 main {
+    width: 100%;
+    max-width: 800px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
 }
 
-.sobre-mim, .galeria {
-    flex: 1;
-    padding: 20px;
+.post {
     background-color: white;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.sobre-mim p {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-.galeria ul {
-    display: flex;
-    list-style-type: none;
-    gap: 10px;
-    padding: 0;
-}
-
-.galeria li {
-    flex: 1;
-}
-
-.galeria img {
+.post img {
     width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    height: 200px;
-    object-fit: cover;
+    max-height: 300px; /* Limita a altura da imagem */
+    height: auto; /* Mantém a proporção */
+    object-fit: contain; /* Garante que a imagem se encaixe sem distorção */
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    font-size: 1.5em;
+    color: #283593;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.summary {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    font-weight: bold;
+    color: #283593;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
 }
 
 footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #6f6f6f;
+    width: 100%;
+    background-color: #414351;
     color: white;
-    font-size: 0.9em;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
